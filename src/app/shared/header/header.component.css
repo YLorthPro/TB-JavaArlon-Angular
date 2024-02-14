@@ -1,0 +1,13 @@
+header {
+  background-color: pink;
+  padding: 20px;
+  text-align: center;
+}
+h1 {
+  color: white;
+  font-family: Arial, sans-serif;
+}
+span {
+  font-size: 20px;
+  color: red;
+}
