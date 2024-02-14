@@ -7,7 +7,8 @@ const routes: Routes = [
   {path:'', redirectTo:'home', pathMatch:'full'},
   {path:'home', component:HomeComponent},
   {path:'contact', component:ContactComponent},
-  {path:'parent', loadChildren: () => import('./parent/parent.module').then(m => m.ParentModule)}
+  {path:'demo', loadChildren: () => import('./demo/demo.module').then(m => m.DemoModule)},
+  {path:'exercice', loadChildren: () => import('./exercice/exercice.module').then(m => m.ExerciceModule)}
 ];
 
 @NgModule({

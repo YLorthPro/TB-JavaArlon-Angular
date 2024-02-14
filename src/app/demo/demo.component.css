@@ -1,17 +1,6 @@
-.sidebar {
-  position: fixed;
-  top: 9px;
-  left: 0;
-  text-align: center;
-  width: 150px;
-  height: 100vh;
-  padding-top: 90px;
-
-}
 
 nav {
   background-color: pink;
-  margin-top: 20px;
 }
 
 ul {
@@ -21,7 +10,7 @@ ul {
 }
 
 li {
-  display: block;
+  display: inline;
   margin-right: 20px;
 }
 

@@ -8,7 +8,6 @@ import { ContactComponent } from './contact/contact.component';
 import { HeaderComponent } from './shared/header/header.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
-import { ParentComponent } from './parent/parent.component';
 
 @NgModule({
   declarations: [
@@ -17,8 +16,7 @@ import { ParentComponent } from './parent/parent.component';
     ContactComponent,
     HeaderComponent,
     FooterComponent,
-    NavbarComponent,
-    ParentComponent
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
