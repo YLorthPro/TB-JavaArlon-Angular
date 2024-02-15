@@ -6,13 +6,17 @@ import {DemoComponent} from "./demo.component";
 import { DemoHomeComponent } from './demo-home/demo-home.component';
 import { DemoBindingsComponent } from './demo-bindings/demo-bindings.component';
 import {FormsModule} from "@angular/forms";
+import { DemoPipeComponent } from './demo-pipe/demo-pipe.component';
+import { MiMajPipe } from './mi-maj.pipe';
 
 
 @NgModule({
   declarations: [
     DemoComponent,
     DemoHomeComponent,
-    DemoBindingsComponent
+    DemoBindingsComponent,
+    DemoPipeComponent,
+    MiMajPipe
   ],
   imports: [
     CommonModule,
