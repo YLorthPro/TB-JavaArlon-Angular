@@ -1,0 +1,9 @@
+<h3>Chronomètre</h3>
+
+<p> {{ temps | convertSec }} </p>
+
+<div>
+  <button (click)="play()">play</button>
+  <button (click)="pause()" >pause</button>
+  <button (click)="reset()" [disabled]="temps==0">reset</button>
+</div>

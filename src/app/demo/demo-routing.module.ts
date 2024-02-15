@@ -4,6 +4,7 @@ import {DemoComponent} from "./demo.component";
 import {DemoHomeComponent} from "./demo-home/demo-home.component";
 import {DemoBindingsComponent} from "./demo-bindings/demo-bindings.component";
 import {DemoPipeComponent} from "./demo-pipe/demo-pipe.component";
+import {DemoDirectivesComponent} from "./demo-directives/demo-directives.component";
 
 const routes: Routes = [
   {
@@ -12,7 +13,8 @@ const routes: Routes = [
     children: [
       {path: 'home', component: DemoHomeComponent},
       {path: 'bindings', component: DemoBindingsComponent},
-      {path: 'pipes', component: DemoPipeComponent}
+      {path: 'pipes', component: DemoPipeComponent},
+      {path: 'directives', component: DemoDirectivesComponent},
     ]
   }
 ];
