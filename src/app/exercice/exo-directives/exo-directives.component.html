@@ -1,0 +1,24 @@
+<div>
+  <h3>Mes films dont la longueur du titre est pair préférés</h3>
+  <tr *ngFor="let f of films">
+    <td *ngIf="f.length%2 == 0">{{f}}</td>
+  </tr>
+</div>
+
+<div>
+  <tr>
+    <td class="square" [ngClass]="{'selected': selectedSquare == 0}"></td>
+    <td class="square" [ngClass]="{'selected': selectedSquare == 1}"></td>
+    <td class="square" [ngClass]="{'selected': selectedSquare == 2}"></td>
+    <td class="square" [ngClass]="{'selected': selectedSquare == 3}"></td>
+    <td class="square" [ngClass]="{'selected': selectedSquare == 4}"></td>
+    <td class="square" [ngClass]="{'selected': selectedSquare == 5}"></td>
+    <td><button class="btn btn-primary col-6" (click)="aGauche()">vers la gauche</button></td>
+    <td><button class="btn btn-primary col-6" (click)="aDroite()">vers la droite</button></td>
+  </tr>
+
+  <div class="row">
+    <button class="btn btn-primary col-6" (click)="aGauche()">vers la gauche</button>
+    <button class="btn btn-primary col-6" (click)="aDroite()">vers la droite</button>
+  </div>
+</div>

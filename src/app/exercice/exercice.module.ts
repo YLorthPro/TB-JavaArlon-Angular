@@ -7,6 +7,7 @@ import { ExoBindingsComponent } from './exo-bindings/exo-bindings.component';
 import {FormsModule} from "@angular/forms";
 import { ExoPipesComponent } from './exo-pipes/exo-pipes.component';
 import {ConvertPipe} from "./pipes/convert.pipe";
+import { ExoDirectivesComponent } from './exo-directives/exo-directives.component';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import {ConvertPipe} from "./pipes/convert.pipe";
     ExerciceComponent,
     ExoBindingsComponent,
     ExoPipesComponent,
-    ConvertPipe
+    ConvertPipe,
+    ExoDirectivesComponent
   ],
   imports: [
     CommonModule,

@@ -15,13 +15,35 @@
   <label for="demo-ng-class">activation nomClasse</label>
 </div>
 
+<!-- Dans une div -->
 <h3>Structural directives</h3>
 <div *ngIf="isBordered">
   je suis actif!
 </div>
 
+<!-- Sans div -->
+<ng-template *ngIf="isBordered">
+  je suis actif!
+</ng-template>
+
+<!-- Angular 17 -->
+@if (isBordered){
+  je suis actif!
+}
+
 <div>
   <p *ngFor="let personne of javanais"> {{personne.nom}} - {{personne.age}} ans </p>
 </div>
+
+<div>
+  <p *ngFor="let personne of javanais; index as i"> {{i + " " + personne.nom}}</p>
+</div>
+
+<!-- Angular 17 (besoin d'un "compteur") et apparition du @empty qui s'affichera si la collection est vide-->
+@for ( p of javanais; track p){
+  {{p.age}}
+} @empty {
+  la liste est vide
+}
 
 <div surlignage>Customs Directives</div>
