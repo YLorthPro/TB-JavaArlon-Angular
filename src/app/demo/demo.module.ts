@@ -10,6 +10,8 @@ import { DemoPipeComponent } from './demo-pipe/demo-pipe.component';
 import { MiMajPipe } from './pipes/mi-maj.pipe';
 import { DemoDirectivesComponent } from './demo-directives/demo-directives.component';
 import { SurlignageDirective } from './directives/surlignage.directive';
+import { DemoInputOutputComponent } from './demo-input-output/demo-input-output.component';
+import { EnfantComponent } from './demo-input-output/enfant/enfant.component';
 
 
 @NgModule({
@@ -20,7 +22,9 @@ import { SurlignageDirective } from './directives/surlignage.directive';
     DemoPipeComponent,
     MiMajPipe,
     DemoDirectivesComponent,
-    SurlignageDirective
+    SurlignageDirective,
+    DemoInputOutputComponent,
+    EnfantComponent
   ],
   imports: [
     CommonModule,

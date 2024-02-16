@@ -5,6 +5,7 @@ import {DemoHomeComponent} from "./demo-home/demo-home.component";
 import {DemoBindingsComponent} from "./demo-bindings/demo-bindings.component";
 import {DemoPipeComponent} from "./demo-pipe/demo-pipe.component";
 import {DemoDirectivesComponent} from "./demo-directives/demo-directives.component";
+import {DemoInputOutputComponent} from "./demo-input-output/demo-input-output.component";
 
 const routes: Routes = [
   {
@@ -15,6 +16,7 @@ const routes: Routes = [
       {path: 'bindings', component: DemoBindingsComponent},
       {path: 'pipes', component: DemoPipeComponent},
       {path: 'directives', component: DemoDirectivesComponent},
+      {path: 'input-output', component: DemoInputOutputComponent}
     ]
   }
 ];
