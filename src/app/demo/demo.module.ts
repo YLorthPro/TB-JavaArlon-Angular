@@ -12,6 +12,7 @@ import { DemoDirectivesComponent } from './demo-directives/demo-directives.compo
 import { SurlignageDirective } from './directives/surlignage.directive';
 import { DemoInputOutputComponent } from './demo-input-output/demo-input-output.component';
 import { EnfantComponent } from './demo-input-output/enfant/enfant.component';
+import { DemoServicesComponent } from './demo-services/demo-services.component';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { EnfantComponent } from './demo-input-output/enfant/enfant.component';
     DemoDirectivesComponent,
     SurlignageDirective,
     DemoInputOutputComponent,
-    EnfantComponent
+    EnfantComponent,
+    DemoServicesComponent
   ],
   imports: [
     CommonModule,

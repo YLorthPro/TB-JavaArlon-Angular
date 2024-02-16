@@ -8,6 +8,9 @@ import {FormsModule} from "@angular/forms";
 import { ExoPipesComponent } from './exo-pipes/exo-pipes.component';
 import {ConvertPipe} from "./pipes/convert.pipe";
 import { ExoDirectivesComponent } from './exo-directives/exo-directives.component';
+import { ExoInputOutputComponent } from './exo-input-output/exo-input-output.component';
+import { CreateComponent } from './exo-input-output/create/create.component';
+import { ReadComponent } from './exo-input-output/read/read.component';
 
 
 @NgModule({
@@ -16,7 +19,10 @@ import { ExoDirectivesComponent } from './exo-directives/exo-directives.componen
     ExoBindingsComponent,
     ExoPipesComponent,
     ConvertPipe,
-    ExoDirectivesComponent
+    ExoDirectivesComponent,
+    ExoInputOutputComponent,
+    CreateComponent,
+    ReadComponent
   ],
   imports: [
     CommonModule,

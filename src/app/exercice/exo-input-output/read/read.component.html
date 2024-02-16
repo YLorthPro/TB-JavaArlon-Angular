@@ -1,0 +1,7 @@
+<h3>A acheter</h3>
+<ul>
+  <li *ngFor="let a of liste; index as i">
+    {{a}}
+    <input type="button" (click)="onClick(i)" value="Supprimer">
+  </li>
+</ul>
