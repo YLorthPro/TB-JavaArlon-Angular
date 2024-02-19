@@ -14,7 +14,7 @@ export class DemoFormsComponent {
       this.form = _formBuilder.group({
         nom: _formBuilder.control('',Validators.required),
         prenom: _formBuilder.control('',Validators.required),
-        dateDeNaissance: _formBuilder.control('',[Validators.required, inThePast])
+        dateDeNaissance: _formBuilder.control('',[Validators.required, inThePast()])
       });
     }
 
