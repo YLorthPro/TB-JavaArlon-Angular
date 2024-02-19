@@ -1,0 +1,28 @@
+<div clas="main">
+  <h1>Le juste prix</h1>
+
+  <tr>
+    <td>Victoires</td>
+    <td>Défaites</td>
+  </tr>
+  <tr>
+    <td>{{resultats[0]}}</td>
+    <td>{{resultats[1]}}</td>
+  </tr>
+
+  <div *ngIf="finDePartie && aGagne()">
+    Vous avez gagné!
+  </div>
+
+  <div *ngIf="finDePartie && !aGagne()">
+    Vous avez perdu!
+  </div>
+
+  <input type="number" [(ngModel)] = nombreJoueur>
+  <button (click)="deviner()" [disabled]="finDePartie">Deviner</button>
+  <button *ngIf="finDePartie" (click)="rejouer()">Rejouer</button>
+
+  <div class="essais">
+    <app-erreur [tabEssais]="essais" [aDeviner]="nombreAleatoire"></app-erreur>
+  </div>
+</div>

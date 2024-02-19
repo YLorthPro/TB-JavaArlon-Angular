@@ -11,6 +11,8 @@ import { ExoDirectivesComponent } from './exo-directives/exo-directives.componen
 import { ExoInputOutputComponent } from './exo-input-output/exo-input-output.component';
 import { CreateComponent } from './exo-input-output/create/create.component';
 import { ReadComponent } from './exo-input-output/read/read.component';
+import { JustePrixComponent } from './juste-prix/juste-prix.component';
+import { ErreurComponent } from './juste-prix/erreur/erreur.component';
 
 
 @NgModule({
@@ -22,7 +24,9 @@ import { ReadComponent } from './exo-input-output/read/read.component';
     ExoDirectivesComponent,
     ExoInputOutputComponent,
     CreateComponent,
-    ReadComponent
+    ReadComponent,
+    JustePrixComponent,
+    ErreurComponent
   ],
   imports: [
     CommonModule,

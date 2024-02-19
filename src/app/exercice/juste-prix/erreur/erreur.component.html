@@ -1,0 +1,5 @@
+<div *ngFor="let item of tabEssais.reverse(); index as i">
+  <p *ngIf="aDeviner < tabEssais[i]" class="moins"> Essai {{tabEssais.length - i}}: C'est moins que {{tabEssais[i]}}</p>
+  <p *ngIf="aDeviner > tabEssais[i]" class="plus">Essai {{tabEssais.length - i}}: C'est plus que {{tabEssais[i]}}</p>
+  <p *ngIf="aDeviner === tabEssais[i]" class="gagne">Gagné! le nombre était {{aDeviner}}</p>
+</div>
