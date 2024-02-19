@@ -2,5 +2,8 @@
   <input type="text" formControlName="nom">
   <input type="text" formControlName="prenom">
   <input type="date" formControlName="dateDeNaissance">
+  <div *ngIf="form.get('dateDeNaissance')?.touched && form.get('dateDeNaissance')?.errors?.['pasDansLePasse']">
+    {{ form.get('dateDeNaissance')?.errors?.['pasDansLePasse'] }}
+  </div>
   <input type="submit" [disabled]="!form.valid">
 </form>
