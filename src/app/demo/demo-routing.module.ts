@@ -7,6 +7,8 @@ import {DemoPipeComponent} from "./demo-pipe/demo-pipe.component";
 import {DemoDirectivesComponent} from "./demo-directives/demo-directives.component";
 import {DemoInputOutputComponent} from "./demo-input-output/demo-input-output.component";
 import {DemoServicesComponent} from "./demo-services/demo-services.component";
+import {LoginService} from "./services/login.service";
+import {LoginComponent} from "./login/login.component";
 
 const routes: Routes = [
   {
@@ -18,7 +20,8 @@ const routes: Routes = [
       {path: 'pipes', component: DemoPipeComponent},
       {path: 'directives', component: DemoDirectivesComponent},
       {path: 'input-output', component: DemoInputOutputComponent},
-      {path: 'service', component: DemoServicesComponent}
+      {path: 'service', component: DemoServicesComponent},
+      {path: 'login', component: LoginComponent}
     ]
   }
 ];

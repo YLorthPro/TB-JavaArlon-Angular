@@ -13,6 +13,8 @@ import { SurlignageDirective } from './directives/surlignage.directive';
 import { DemoInputOutputComponent } from './demo-input-output/demo-input-output.component';
 import { EnfantComponent } from './demo-input-output/enfant/enfant.component';
 import { DemoServicesComponent } from './demo-services/demo-services.component';
+import {LoginComponent} from "./login/login.component";
+import {LoginService} from "./services/login.service";
 
 
 @NgModule({
@@ -26,12 +28,16 @@ import { DemoServicesComponent } from './demo-services/demo-services.component';
     SurlignageDirective,
     DemoInputOutputComponent,
     EnfantComponent,
-    DemoServicesComponent
+    DemoServicesComponent,
+    LoginComponent
   ],
   imports: [
     CommonModule,
     DemoRoutingModule,
     FormsModule
+  ],
+  providers: [
+    LoginService
   ]
 })
 export class DemoModule { }
