@@ -1,0 +1,6 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+  <input type="text" formControlName="nom">
+  <input type="text" formControlName="prenom">
+  <input type="date" formControlName="dateDeNaissance">
+  <input type="submit" [disabled]="!form.valid">
+</form>

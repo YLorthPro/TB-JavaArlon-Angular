@@ -5,7 +5,7 @@ import { DemoRoutingModule } from './demo-routing.module';
 import {DemoComponent} from "./demo.component";
 import { DemoHomeComponent } from './demo-home/demo-home.component';
 import { DemoBindingsComponent } from './demo-bindings/demo-bindings.component';
-import {FormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { DemoPipeComponent } from './demo-pipe/demo-pipe.component';
 import { MiMajPipe } from './pipes/mi-maj.pipe';
 import { DemoDirectivesComponent } from './demo-directives/demo-directives.component';
@@ -15,6 +15,7 @@ import { EnfantComponent } from './demo-input-output/enfant/enfant.component';
 import { DemoServicesComponent } from './demo-services/demo-services.component';
 import {LoginComponent} from "./login/login.component";
 import {LoginService} from "./services/login.service";
+import { DemoFormsComponent } from './demo-forms/demo-forms.component';
 
 
 @NgModule({
@@ -29,12 +30,14 @@ import {LoginService} from "./services/login.service";
     DemoInputOutputComponent,
     EnfantComponent,
     DemoServicesComponent,
-    LoginComponent
+    LoginComponent,
+    DemoFormsComponent
   ],
   imports: [
     CommonModule,
     DemoRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [
     LoginService
