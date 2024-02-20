@@ -4,7 +4,7 @@ import { CommonModule } from '@angular/common';
 import { ExerciceRoutingModule } from './exercice-routing.module';
 import {ExerciceComponent} from "./exercice.component";
 import { ExoBindingsComponent } from './exo-bindings/exo-bindings.component';
-import {FormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { ExoPipesComponent } from './exo-pipes/exo-pipes.component';
 import {ConvertPipe} from "./pipes/convert.pipe";
 import { ExoDirectivesComponent } from './exo-directives/exo-directives.component';
@@ -13,6 +13,7 @@ import { CreateComponent } from './exo-input-output/create/create.component';
 import { ReadComponent } from './exo-input-output/read/read.component';
 import { JustePrixComponent } from './juste-prix/juste-prix.component';
 import { ErreurComponent } from './juste-prix/erreur/erreur.component';
+import { ExoFormsComponent } from './exo-forms/exo-forms.component';
 
 
 @NgModule({
@@ -26,12 +27,14 @@ import { ErreurComponent } from './juste-prix/erreur/erreur.component';
     CreateComponent,
     ReadComponent,
     JustePrixComponent,
-    ErreurComponent
+    ErreurComponent,
+    ExoFormsComponent
   ],
   imports: [
     CommonModule,
     ExerciceRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ]
 })
 export class ExerciceModule { }

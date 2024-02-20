@@ -1,0 +1,44 @@
+<form [formGroup]="formulaire" (submit)="envoyer()">
+  <div>
+    <input type="text" formControlName="nom" placeholder="nom">
+    <p *ngIf="formulaire.get('nom')?.invalid && (formulaire.get('nom')?.dirty || formulaire.get('nom')?.touched)" class="error-message">Nom invalide</p>
+  </div>
+  <div>
+    <input type="text" formControlName="prenom" placeholder="prenom">
+    <p *ngIf="formulaire.get('prenom')?.invalid && (formulaire.get('prenom')?.dirty || formulaire.get('prenom')?.touched)" class="error-message">Prenom invalide</p>
+  </div>
+  <div>
+    <input type="date" formControlName="dateDeNaissance" >
+    <p *ngIf="formulaire.get('dateDeNaissance')?.invalid && (formulaire.get('dateDeNaissance')?.dirty || formulaire.get('dateDeNaissance')?.touched)" class="error-message">Date de naissance invalide</p>
+  </div>
+  <div>
+    <input type="text" formControlName="numero" placeholder="numero">
+    <p *ngIf="formulaire.get('numero')?.invalid && (formulaire.get('numero')?.dirty || formulaire.get('numero')?.touched)" class="error-message">Numero invalide</p>
+  </div>
+  <div>
+    <input type="text" formControlName="rue" placeholder="rue">
+    <p *ngIf="formulaire.get('rue')?.invalid && (formulaire.get('rue')?.dirty || formulaire.get('rue')?.touched)" class="error-message">Rue invalide</p>
+  </div>
+  <div>
+    <input type="number" formControlName="codePostal">
+    <p *ngIf="formulaire.get('codePostal')?.invalid && (formulaire.get('codePostal')?.dirty || formulaire.get('codePostal')?.touched)" class="error-message">Code postal invalide</p>
+  </div>
+  <div>
+    <input type="text" formControlName="ville" placeholder="ville">
+    <p *ngIf="formulaire.get('ville')?.invalid && (formulaire.get('ville')?.dirty || formulaire.get('ville')?.touched)" class="error-message">Ville invalide</p>
+  </div>
+  <div>
+    <input type="submit" [disabled]="formulaire.invalid">
+  </div>
+</form>
+
+<h1>Les inscrits</h1>
+<tr *ngFor="let p of inscrits">
+  <td>{{p.nom}} </td>
+  <td>{{p.prenom}} - </td>
+  <td>{{p.dateDeNaissance | date: 'shortDate'}} - </td>
+  <td>{{p.numero}} - </td>
+  <td>{{p.rue}} - </td>
+  <td>{{p.codePostal}} - </td>
+  <td>{{p.ville}} </td>
+</tr>
