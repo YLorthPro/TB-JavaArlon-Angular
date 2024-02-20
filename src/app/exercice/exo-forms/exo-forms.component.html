@@ -42,3 +42,22 @@
   <td>{{p.codePostal}} - </td>
   <td>{{p.ville}} </td>
 </tr>
+
+<section *ngIf="!connectedUser">
+  <div>
+    <div>
+      <label for="prenom">Prenom:</label>
+      <input type="text" id="prenom" [(ngModel)]="data.prenom" />
+    </div>
+    <div>
+      <label for="nom">Nom:</label>
+      <input type="nom" id="nom" [(ngModel)]="data.nom" />
+    </div>
+  </div>
+  <button (click)="connection()" class="btn btn-danger">Se connecter</button>
+</section>
+
+<section *ngIf="connectedUser">
+  <p>Bienvenue {{ connectedUser.prenom }}</p>
+  <button (click)="disconnect()">Se déconnecter</button>
+</section>

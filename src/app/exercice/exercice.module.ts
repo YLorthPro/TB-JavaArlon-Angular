@@ -14,6 +14,7 @@ import { ReadComponent } from './exo-input-output/read/read.component';
 import { JustePrixComponent } from './juste-prix/juste-prix.component';
 import { ErreurComponent } from './juste-prix/erreur/erreur.component';
 import { ExoFormsComponent } from './exo-forms/exo-forms.component';
+import { ExoRoutingComponent } from './exo-routing/exo-routing.component';
 
 
 @NgModule({
@@ -28,7 +29,8 @@ import { ExoFormsComponent } from './exo-forms/exo-forms.component';
     ReadComponent,
     JustePrixComponent,
     ErreurComponent,
-    ExoFormsComponent
+    ExoFormsComponent,
+    ExoRoutingComponent
   ],
   imports: [
     CommonModule,

@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import {FormBuilder, FormGroup} from "@angular/forms";
 import {Personne, PersonneForm} from "../models/Personne";
-import {InscriptionService} from "../../demo/services/inscription.service";
+import {InscriptionService} from "../services/inscription.service";
 
 @Component({
   selector: 'app-exo-forms',
@@ -12,6 +12,13 @@ export class ExoFormsComponent {
   formulaire: FormGroup
 
   inscrits: Personne[] = []
+
+  data = {
+    prenom: '',
+    nom: ''
+  }
+
+  connectedUser?: Personne;
 
   constructor(private _formBuilder: FormBuilder,
               private _inscriptionService: InscriptionService) {
@@ -39,5 +46,18 @@ export class ExoFormsComponent {
 
   getPersonnes() {
       this.inscrits = this._inscriptionService.getPersonnes();
+  }
+
+  connection() {
+    // Si l'utilisateur n'a rien tapé dans le login, on n'appelle pas le service pour rien
+    if (this.data.prenom.trim()) {
+      this._inscriptionService.connect(this.data.prenom, this.data.nom);
+      this.connectedUser = this._inscriptionService.connectedUser;
+    }
+  }
+
+  disconnect() {
+    this._inscriptionService.disconnect();
+    this.connectedUser = this._inscriptionService.connectedUser;
   }
 }
