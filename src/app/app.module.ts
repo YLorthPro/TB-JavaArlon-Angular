@@ -26,7 +26,9 @@ import {HttpClientModule} from "@angular/common/http";
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [
+    { provide : "apiUrl", useValue : "https://jsonplaceholder.typicode.com/"},
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import {Inject, Injectable} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {User} from "../models/User";
 
@@ -7,14 +7,15 @@ import {User} from "../models/User";
 })
 export class DemoPostService {
 
-  apiUrl = "https://jsonplaceholder.typicode.com/"
-  constructor(private readonly _httpClient: HttpClient) { }
+  constructor(private readonly _httpClient: HttpClient,
+              @Inject('apiUrl') private _apiUrl : string) {
+  }
 
   getAll(){
-    return this._httpClient.get<User[]>(this.apiUrl + "users")
+    return this._httpClient.get<User[]>(this._apiUrl + "users")
   }
 
   insert(utilisateur: User){
-    return this._httpClient.post(this.apiUrl, utilisateur)
+    return this._httpClient.post(this._apiUrl, utilisateur)
   }
 }
