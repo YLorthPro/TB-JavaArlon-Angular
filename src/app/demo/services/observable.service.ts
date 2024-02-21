@@ -6,6 +6,7 @@ import {BehaviorSubject} from "rxjs";
 })
 export class ObservableService {
   nombre = new BehaviorSubject<number>(0);
+  tableauDeNombre = new BehaviorSubject<number[]>([1,2,3,4,5])
   constructor() { }
 
   nouvelleValeur(nombre: number){

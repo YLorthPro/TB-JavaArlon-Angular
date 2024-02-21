@@ -13,6 +13,7 @@ import {DemoFormsComponent} from "./demo-forms/demo-forms.component";
 import {GEOFFREY_ONLY} from "./guard/geoffrey-only";
 import {ObservableService} from "./services/observable.service";
 import {DemoObservablesComponent} from "./demo-observables/demo-observables.component";
+import {DemoHttpClientComponent} from "./demo-http-client/demo-http-client.component";
 
 const routes: Routes = [
   {
@@ -27,7 +28,8 @@ const routes: Routes = [
       {path: 'service', component: DemoServicesComponent},
       {path: 'login', component: LoginComponent},
       {path: 'observables', component: DemoObservablesComponent},
-      {path: 'forms', component: DemoFormsComponent, canActivate: [GEOFFREY_ONLY]}
+      {path: 'forms', component: DemoFormsComponent, canActivate: [GEOFFREY_ONLY]},
+      {path: 'http-client', component: DemoHttpClientComponent}
     ]
   }
 ];

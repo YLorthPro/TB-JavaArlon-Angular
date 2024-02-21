@@ -17,6 +17,8 @@ import {LoginComponent} from "./login/login.component";
 import {LoginService} from "./services/login.service";
 import { DemoFormsComponent } from './demo-forms/demo-forms.component';
 import { DemoObservablesComponent } from './demo-observables/demo-observables.component';
+import { DemoHttpClientComponent } from './demo-http-client/demo-http-client.component';
+import {HttpClient, HttpClientModule} from "@angular/common/http";
 
 
 @NgModule({
@@ -33,13 +35,15 @@ import { DemoObservablesComponent } from './demo-observables/demo-observables.co
     DemoServicesComponent,
     LoginComponent,
     DemoFormsComponent,
-    DemoObservablesComponent
+    DemoObservablesComponent,
+    DemoHttpClientComponent
   ],
   imports: [
     CommonModule,
     DemoRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [
     LoginService
