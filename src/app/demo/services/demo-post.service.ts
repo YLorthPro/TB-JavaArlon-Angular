@@ -18,4 +18,8 @@ export class DemoPostService {
   insert(utilisateur: User){
     return this._httpClient.post(this._apiUrl, utilisateur)
   }
+
+  getOne(){
+    return this._httpClient.get<User>(this._apiUrl + "users/" + 1);
+  }
 }
