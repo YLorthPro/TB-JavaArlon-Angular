@@ -16,6 +16,7 @@ import { DemoServicesComponent } from './demo-services/demo-services.component';
 import {LoginComponent} from "./login/login.component";
 import {LoginService} from "./services/login.service";
 import { DemoFormsComponent } from './demo-forms/demo-forms.component';
+import { DemoObservablesComponent } from './demo-observables/demo-observables.component';
 
 
 @NgModule({
@@ -31,7 +32,8 @@ import { DemoFormsComponent } from './demo-forms/demo-forms.component';
     EnfantComponent,
     DemoServicesComponent,
     LoginComponent,
-    DemoFormsComponent
+    DemoFormsComponent,
+    DemoObservablesComponent
   ],
   imports: [
     CommonModule,

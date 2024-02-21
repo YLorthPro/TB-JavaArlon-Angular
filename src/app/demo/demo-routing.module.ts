@@ -11,6 +11,8 @@ import {LoginService} from "./services/login.service";
 import {LoginComponent} from "./login/login.component";
 import {DemoFormsComponent} from "./demo-forms/demo-forms.component";
 import {GEOFFREY_ONLY} from "./guard/geoffrey-only";
+import {ObservableService} from "./services/observable.service";
+import {DemoObservablesComponent} from "./demo-observables/demo-observables.component";
 
 const routes: Routes = [
   {
@@ -24,6 +26,7 @@ const routes: Routes = [
       {path: 'input-output', component: DemoInputOutputComponent},
       {path: 'service', component: DemoServicesComponent},
       {path: 'login', component: LoginComponent},
+      {path: 'observables', component: DemoObservablesComponent},
       {path: 'forms', component: DemoFormsComponent, canActivate: [GEOFFREY_ONLY]}
     ]
   }
