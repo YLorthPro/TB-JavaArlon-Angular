@@ -11,6 +11,7 @@ import { NavbarComponent } from './shared/navbar/navbar.component';
 import { Page404Component } from './shared/Page404/Page404.component';
 import {HTTP_INTERCEPTORS, HttpClientModule} from "@angular/common/http";
 import {authInterceptor} from "./demo/interceptor/auth.interceptor";
+import {authInterceptorExo} from "./exercice/interceptor/auth.interceptor";
 
 @NgModule({
   declarations: [
@@ -29,7 +30,9 @@ import {authInterceptor} from "./demo/interceptor/auth.interceptor";
   ],
   providers: [
     { provide : "apiUrl", useValue : "https://jsonplaceholder.typicode.com/"},
-    { provide: HTTP_INTERCEPTORS, useClass: authInterceptor, multi:true}
+    { provide : "localhost", useValue : "http://localhost:8080/"},
+    //{ provide: HTTP_INTERCEPTORS, useClass: authInterceptor, multi:true},
+    { provide: HTTP_INTERCEPTORS, useClass: authInterceptorExo, multi: true },
   ],
   bootstrap: [AppComponent]
 })

@@ -15,6 +15,8 @@ import { JustePrixComponent } from './juste-prix/juste-prix.component';
 import { ErreurComponent } from './juste-prix/erreur/erreur.component';
 import { ExoFormsComponent } from './exo-forms/exo-forms.component';
 import { ExoRoutingComponent } from './exo-routing/exo-routing.component';
+import { ExoSecuriteAPIComponent } from './exo-securite-api/exo-securite-api.component';
+import { ExoMesbadgesComponent } from './exo-mesbadges/exo-mesbadges.component';
 
 
 @NgModule({
@@ -30,7 +32,9 @@ import { ExoRoutingComponent } from './exo-routing/exo-routing.component';
     JustePrixComponent,
     ErreurComponent,
     ExoFormsComponent,
-    ExoRoutingComponent
+    ExoRoutingComponent,
+    ExoSecuriteAPIComponent,
+    ExoMesbadgesComponent
   ],
   imports: [
     CommonModule,

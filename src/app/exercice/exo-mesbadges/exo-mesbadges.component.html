@@ -1,0 +1,11 @@
+<h1>{{userConnected}}</h1>
+
+<h2>Vos badges</h2>
+<div *ngFor="let badge of userBadges| async">{{ badge }}</div>
+
+<ng-container *ngIf="localStorage.getItem('role') === 'ADMIN'">
+  <h3>Tout les inscrits</h3>
+  <tr *ngFor="let p of users | async">{{p}}</tr>
+</ng-container>
+
+
