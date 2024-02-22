@@ -1,27 +1,32 @@
-# DemoAngularTB
+# Guideline de Projet Angular
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.1.3.
+## 1. Initialisation :
+### 1.1 Avant Angular 17
+- Créer un nouveau projet Angular en utilisant la commande : `ng new nom-du-projet` pour un projet an module ou `ng new nom-du-projet --standalone` pour le standalone.
+### 1.1 Angular 17
+- Créer un nouveau projet Angular en utilisant la commande : `ng new nom-du-projet` pour un projet en standalone ou `ng new nom-du-projet --no-standalone` pour les modules.
 
-## Development server
+## 2. Gestion des données :
+- Modéliser les données attendues de l'API en créant des classes TypeScript.
+- Utiliser ces classes pour typer les données reçues dans les services et les composants.
+- 
+## 3. Création des services :
+- Créer un service Angular pour gérer les appels à l'API en utilisant la commande : `ng generate service service-nom`.
+- Dans ce service, utiliser le module HttpClient pour effectuer des requêtes HTTP vers l'API.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## 4. Configuration de HttpClientModule :
+- Importer HttpClientModule dans l'application en l'ajoutant dans les imports de `app.module.ts` (si pas en standalone).
 
-## Code scaffolding
+## 5. Création d'un interceptor :
+- Créer un interceptor qui permettra de joindre le token à chacune des requêtes.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## 6. Utilisation des composants :
+- Créer des composants pour afficher les données récupérées depuis l'API ou envoyer des données via un formulaire.
+- Dans ces composants, injecter le service créé précédemment pour récupérer les données depuis l'API.
 
-## Build
+## 7. Affichage des données :
+- Utiliser les données récupérées depuis l'API dans les composants Angular pour les afficher dans les vues HTML en utilisant la syntaxe Angular.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## 8. Gestion des erreurs :
+- Implémenter la gestion des erreurs dans les services pour gérer les cas où l'appel à l'API échoue.
+- Afficher des messages d'erreur ou mettre en œuvre des mécanismes pour garantir une expérience utilisateur fluide.
