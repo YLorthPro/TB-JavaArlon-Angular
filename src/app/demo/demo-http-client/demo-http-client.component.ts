@@ -1,5 +1,5 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
-import {DemoPostService} from "../services/demo-post.service";
+import {DemoJsonplaceholderService} from "../services/demo-jsonplaceholder.service";
 import { User} from "../models/User";
 import {map, Observable, Subject, Subscription, takeUntil} from "rxjs";
 
@@ -22,26 +22,46 @@ export class DemoHttpClientComponent implements OnInit, OnDestroy{
   //pour ceux qui veulent
   nomUser1!: Observable<string>;
 
-  constructor(private readonly _demoPostService: DemoPostService) {
+  constructor(private readonly _demoJsonplaceholderService: DemoJsonplaceholderService) {
   }
 
   ngOnInit() {
-    /*this.mySub = */this._demoPostService.getAll().pipe(
+
+    this._demoJsonplaceholderService.getAll().pipe(
       takeUntil(this.$destroyed)
     ).subscribe({
-      next: (valeur) => this.tableau=valeur,
-      error:(err)=>console.log(err.error()),
-      complete:()=>console.log("Chargement terminé")
+        next: (valeur) => this.tableau=valeur,
+        error:(err)=>console.log(err.error()),
+        complete:()=>console.log("Chargement terminé")
       }
     );
 
-    this.nomUser1 = this._demoPostService.getOne().pipe(
+    /*    Version avec Subscription dans variable mySub
+    this.mySub = this._demoJsonplaceholderService.getAll().pipe(
+      takeUntil(this.$destroyed)
+    ).subscribe({
+        next: (valeur) => this.tableau=valeur,
+        error:(err)=>console.log(err.error()),
+        complete:()=>console.log("Chargement terminé")
+      }
+    );
+    */
+
+    /*    Version de base
+    this._demoJsonplaceholderService.getAll().subscribe({
+        next: (valeur) => this.tableau=valeur,
+        error:(err)=>console.log(err.error()),
+        complete:()=>console.log("Chargement terminé")
+      }
+    );*/
+
+    this.nomUser1 = this._demoJsonplaceholderService.getOne().pipe(
       map(u => u.name)
     )
   }
 
   ngOnDestroy() {
-    /*
+    /* pour version avec mySub
     this.mySub.unsubscribe();
      */
 
@@ -50,7 +70,7 @@ export class DemoHttpClientComponent implements OnInit, OnDestroy{
   }
 
   envoyer(chose: User){
-    this._demoPostService.insert(chose).subscribe()
+    this._demoJsonplaceholderService.insert(chose).subscribe()
   }
 
 }

@@ -5,8 +5,9 @@ import {User} from "../models/User";
 @Injectable({
   providedIn: 'root'
 })
-export class DemoPostService {
+export class DemoJsonplaceholderService {
 
+  //const apiUrl = "localhost:8080/"
   constructor(private readonly _httpClient: HttpClient,
               @Inject('apiUrl') private _apiUrl : string) {
   }
